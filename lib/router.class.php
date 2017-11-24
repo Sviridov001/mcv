@@ -85,6 +85,13 @@ class Router{
         $this->action = Config::get('default_action');
 
         $uri_parts = explode('?', $this->uri);
+
+        $path = $uri_parts[0];
+
+        $path_parts = explode('/', $path);
+
+        echo "<pre>"; print_r($path_parts);
+
        // print_r('Ok! Router was called with uri:' . $uri);
     }
 }
